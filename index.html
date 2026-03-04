@@ -1,8 +1,254 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>personal-website</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Biodataku - Dilla Fauziatu Zahra</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Arial', sans-serif;
+			line-height: 1.6;
+			color: #333;
+		}
+
+		/* Navigasi */
+		.navigasi {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 50px;
+			background-color: #2c3e50;
+			color: white;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		}
+
+		.logo h2 {
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.menu ul {
+			display: flex;
+			list-style: none;
+			gap: 30px;
+		}
+
+		.menu a {
+			color: white;
+			text-decoration: none;
+			font-size: 16px;
+			transition: 0.3s;
+		}
+
+		.menu a:hover {
+			color: #3498db;
+		}
+
+		/* Banner */
+		.banner {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			padding: 60px 20px;
+			text-align: center;
+			position: relative;
+		}
+
+		.banner img {
+			max-width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			border: 5px solid white;
+			margin-bottom: 20px;
+			object-fit: cover;
+		}
+
+		.banner h1 {
+			font-size: 48px;
+			margin-bottom: 10px;
+		}
+
+		.banner p {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		.banner button {
+			background-color: #f39c12;
+			color: white;
+			border: none;
+			padding: 12px 30px;
+			font-size: 16px;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+
+		.banner button:hover {
+			background-color: #e67e22;
+		}
+
+		/* Box Pendidikan */
+		.box-pendidikan {
+			padding: 50px 20px;
+			background-color: #f8f9fa;
+		}
+
+		.box-pendidikan h1 {
+			text-align: center;
+			font-size: 36px;
+			margin-bottom: 40px;
+			color: #2c3e50;
+		}
+
+		.box-kanan {
+			background-color: white;
+			padding: 30px;
+			margin-bottom: 30px;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			transition: transform 0.3s;
+		}
+
+		.box-kanan:hover {
+			transform: translateY(-5px);
+		}
+
+		.box-kanan img {
+			max-width: 100px;
+			height: 100px;
+			margin-bottom: 15px;
+			object-fit: cover;
+		}
+
+		.box-kanan h3 {
+			color: #667eea;
+			margin: 15px 0;
+			font-size: 20px;
+		}
+
+		.box-kanan p {
+			color: #666;
+			line-height: 1.8;
+		}
+
+		/* Box Hobi */
+		.box-hobi {
+			padding: 50px 20px;
+			background-color: white;
+		}
+
+		.box-hobi h1 {
+			text-align: center;
+			font-size: 36px;
+			margin-bottom: 40px;
+			color: #2c3e50;
+		}
+
+		.box-kiri {
+			background-color: #f8f9fa;
+			padding: 30px;
+			margin-bottom: 30px;
+			border-radius: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			text-align: center;
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			transition: transform 0.3s;
+		}
+
+		.box-kiri:hover {
+			transform: translateY(-5px);
+		}
+
+		.box-kiri img {
+			max-width: 120px;
+			height: 120px;
+			margin-bottom: 15px;
+			object-fit: cover;
+		}
+
+		.box-kiri h3 {
+			color: #764ba2;
+			margin: 15px 0;
+			font-size: 20px;
+		}
+
+		.box-kiri p {
+			color: #666;
+			line-height: 1.8;
+		}
+
+		/* Box Kontak */
+		.box-kontak {
+			padding: 50px 20px;
+			background-color: #f8f9fa;
+			text-align: center;
+		}
+
+		.box-kontak h1 {
+			font-size: 36px;
+			margin-bottom: 30px;
+			color: #2c3e50;
+		}
+
+		.box-kontak img {
+			max-width: 80px;
+			height: 80px;
+			margin-bottom: 15px;
+		}
+
+		.box-kontak h2 {
+			color: #667eea;
+			font-size: 24px;
+			margin-top: 15px;
+		}
+
+		/* Footer */
+		.footer {
+			background-color: #2c3e50;
+			color: white;
+			text-align: center;
+			padding: 30px 20px;
+			margin-top: 50px;
+		}
+
+		.footer p {
+			font-size: 14px;
+		}
+
+		/* Responsive */
+		@media (max-width: 768px) {
+			.navigasi {
+				flex-direction: column;
+				padding: 15px;
+			}
+
+			.menu ul {
+				flex-direction: column;
+				gap: 10px;
+				margin-top: 20px;
+			}
+
+			.banner h1 {
+				font-size: 32px;
+			}
+
+			.banner p {
+				font-size: 14px;
+			}
+		}
+	</style>
 </head>
 <body>
 
@@ -13,66 +259,62 @@
 
 	<div class="menu">
 		<ul>
-			<li><a href="">Hai!</a></li>
-			<li><a href="">Pendidikan</a></li>
-			<li><a href="">Hobi</a></li>
-			<li><a href="">Kontak</a></li>
+			<li><a href="#home">Hai!</a></li>
+			<li><a href="#pendidikan">Pendidikan</a></li>
+			<li><a href="#hobi">Hobi</a></li>
+			<li><a href="#kontak">Kontak</a></li>
 		</ul>
 	</div>
 </div>
 
-<div class="banner">
-	<img src="Pictures - Copy/images dilla.jpeg">
-	<h1>Hai...<span></span></h1>
+<div class="banner" id="home">
+	<h1>Hai... 👋</h1>
 	<p>Salam Hangat Dari Saya dan Semoga Kita Bisa Berteman Baik</p>
 
-	<a href=""><button>Selengkapnya</button></a>
+	<a href="#pendidikan"><button>Selengkapnya</button></a>
 </div>
 
-<div class="box-pendidikan">
+<div class="box-pendidikan" id="pendidikan">
 	<h1>Pendidikanku</h1>
 
-<div class="box-kanan">
-	<img src="Pictures - Copy/icon.sd.jpeg">
-	<p><h3> Sekolah Dasar</h3></p>
-	<p>Saya bersekolah Dasar di SDN Bumi Agung, Kecamatan Kalianda, Kabupaten Lampung Selatan</p>
+	<div class="box-kanan">
+		<h3>🎓 Sekolah Dasar</h3>
+		<p>Saya bersekolah Dasar di SDN Bumi Agung, Kecamatan Kalianda, Kabupaten Lampung Selatan</p>
+	</div>
+
+	<div class="box-kanan">
+		<h3>📚 Sekolah Menengah Pertama</h3>
+		<p>Saya bersekolah Menengah Pertama di SMPN 1 Kalianda, Kecamatan Kalianda, Kabupaten Lampung Selatan</p>
+	</div>
+
+	<div class="box-kanan">
+		<h3>🏫 Sekolah Menengah Atas</h3>
+		<p>Saya bersekolah Menengah Atas di SMAN 1 Kalianda, Kecamatan Kalianda, Kabupaten Lampung Selatan</p>
+	</div>
 </div>
 
-<div class="box-kanan">
-    	<img src="Pictures - Copy/icon.sma.jpeg">
-    	<p><h3>Sekolah Menengah Pertama</h3></p>
-    	<p>Saya bersekolah Menengah Pertama di SMPN 1 Kalianda, Kecamatan Kalianda, Kabupaten Lampung Selatan</p>
-</div>
-
-<div class="box-kanan">
-    	<img src="Pictures - Copy/icon.sma.jpeg">
-    	<p><h3>Sekolah Menengah Atas</h3></p>
-    	<p>Saya bersekolah Menengah Atas di SMAN 1 Kalianda, Kecamatan Kalianda, Kabupaten Lampung Selatan</p>
-</div>
-    
-<div class="box-hobi">
+<div class="box-hobi" id="hobi">
 	<h1>Hobiku</h1>
     
-    <div class="box-kiri">
-    	<img src="baca-removebg-preview.png">
-    	<p><h3>Membaca</h3></p>
-    	<p>Saya suka sekali membaca, membaca buku novel, wattpad, dan tak jarang pula buku pelajaran</p>
+	<div class="box-kiri">
+		<h3>📖 Membaca</h3>
+		<p>Saya suka sekali membaca, membaca buku novel, wattpad, dan tak jarang pula buku pelajaran</p>
+	</div>
+
+	<div class="box-kiri">
+		<h3>🎵 Bernyanyi</h3>
+		<p>Saya suka sekali bernyanyi, lagu apapun saya nyanyikan ketika saya bosan</p>
+	</div>
 </div>
 
-<div class="box-kiri">
-    	<img src="nyanyi-removebg-preview.png">
-    	<p><h3>Bernyanyi</h3></p>
-    	<p>Saya suka sekali bernyanyi, lagu apapun saya nyanyikan ketika saya bosan</p>
-</div>
-
-<div class="box-kontak">
+<div class="box-kontak" id="kontak">
 	<h1>Hubungi Kontakku</h1>
-    	<img src="pictures/icon.kontak.png">
-    	<h2>081237312336</h2>
+	<h3>📱 Nomor Telepon</h3>
+	<h2>081237312336</h2>
 </div>
 
 <div class="footer">
-      <p>Personal Website : Dilla Fauziatu Zahra |SMAN 1 Kalianda |NISN: 0092770245</p>
+	<p>Personal Website : Dilla Fauziatu Zahra | SMAN 1 Kalianda | NISN: 0092770245</p>
 </div>
 
 </body>
