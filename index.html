@@ -1,63 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background: #35424a;
-            color: #ffffff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #35424a;
-            color: #ffffff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+	<title>personal-website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section>
-        <h2>About Me</h2>
-        <p>This is a short paragraph about myself.</p>
-    </section>
-    <footer>
-        <p>&copy; 2026 My Personal Website</p>
-    </footer>
+
+<div class="navigasi">   
+	<div class="logo"> 
+		<h2>Biodataku</h2>
+	</div>
+
+	<div class="menu">
+		<ul>
+			<li><a href="#hai">Hai!</a></li>
+			<li><a href="#pendidikan">Pendidikan</a></li>
+			<li><a href="#hobi">Hobi</a></li>
+			<li><a href="#kontak">Kontak</a></li>
+		</ul>
+	</div>
+</div>
+
+
+
+<div class="banner" id="hai">
+	<img src="Pictures - Copy/images dilla.jpeg">
+	<h1>Hai...<span></span></h1>
+	<p>Salam Hangat Dari Saya dan Semoga Kita Bisa Berteman Baik</p>
+
+	<a href="#pendidikan"><button>Selengkapnya</button></a>
+</div>
+
+
+
+<div class="box-pendidikan" id="pendidikan">
+	<h1>Riwayat Pendidikanku</h1>
+    <div class="box-kiri">
+    	<img src="Pictures - Copy/icon.sd.jpeg">
+    	<p><h3>Sekolah Dasar</h3></p>
+    	<p>Saya bersekolah dasar di SDN Bumi Agung, Kecamatan kota Kalianda, Kabupaten Lampung Selatan-LAMSEL</p>
+</div>
+
+<div class="box-tengah">
+    	<img src="Pictures - Copy/icon.sma.jpeg">
+    	<p><h3>Sekolah Menengah Pertama</h3></p>
+    	<p>Saya bersekolah Menengah Pertama di SMP Negri 1 Kalianda, Kecamatan kota Kalianda, Kabupaten Lampung Selatan-LAMSEL</p>
+</div>
+
+<div class="box-kanan">
+    	<img src="Pictures - Copy/icon.sma.jpeg">
+    	<p><h3>Sekolah Menengah Atas</h3></p>
+    	<p>Saya bersekolah Menengah Atas di SMA Negri 1 Kalianda, Kecamatan kota Kalianda, Kabupaten Lampung Selatan-LAMSEL</p>
+</div>
+    
+ <div class="box-hobi" id="hobi">
+	<h1>Hobiku</h1>
+    
+    <div class="box-kiri">
+    	<img src="Pictures - Copy/membaca.jpg">
+    	<p><h3>Reading</h3></p>
+    	<p>Saya suka sekali membaca, seperti, membaca buku novel, wattpad, dan tak jarang pula buku pelajaran</p>
+</div>
+
+
+<div class="box-kontak" id="kontak">
+	<h1>Hubungi Kontakku</h1>
+    	<img src="pictures/icon.kontak.png">
+    	<h2>081237312336</h2>
+
+</div>
+
+
+<div class="footer">
+      <p>Copyright : Dilla Fauziatu Zahra |SMAN 1 Kalianda |NISN : 0092770245</p>
+</div>
+
 </body>
 </html>
